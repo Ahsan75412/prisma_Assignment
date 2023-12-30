@@ -171,20 +171,16 @@ export async function GET (req , res){
 //****Get Data to find from db many student** */
 
 
-export async function GET (req , res){
 
-       try{
-        const prisma = new PrismaClient();
 
-        let result = await prisma.students.findMany({
-            where:{id:1}, 
-            select:{courses:true , grade:true}
-        })
+export async function GET(req, res) {
+  try {
+    const prisma = new PrismaClient();
 
-        return NextResponse.json({status:'success' , data:result})
+    let result = await prisma.students.findMany(); 
 
-       }catch(e){
-        return NextResponse.json({status:'fail' , data:e})
-
-       }
+    return NextResponse.json({ status: 'success', data: result });
+  } catch (e) {
+    return NextResponse.json({ status: 'fail', data: e.toString() });
+  }
 }
