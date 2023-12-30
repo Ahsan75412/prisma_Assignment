@@ -9,27 +9,27 @@ import { PrismaClient } from "@prisma/client";
 
 
 
-// export async function POST(req, res) {
+export async function POST(req, res) {
 
-//     try {
-//         const prisma = new PrismaClient();
+    try {
+        const prisma = new PrismaClient();
 
 
 
-//         let reqBody = await req.json()
-//         console.log('Request Body:', reqBody);
+        let reqBody = await req.json()
+        console.log('Request Body:', reqBody);
 
-//         let result = await prisma.students.create({
-//             data: reqBody
-//         })
+        let result = await prisma.students.create({
+            data: reqBody
+        })
 
-//         return NextResponse.json({ status: 'success', data: result })
+        return NextResponse.json({ status: 'success', data: result })
 
-//     } catch (e) {
-//         return NextResponse.json({ status: 'fail', data: e.toString() })
+    } catch (e) {
+        return NextResponse.json({ status: 'fail', data: e.toString() })
 
-//     }
-// }
+    }
+}
 
 
 
@@ -43,26 +43,26 @@ import { PrismaClient } from "@prisma/client";
 
 
 
-// export async function POST(req, res) {
+export async function POST(req, res) {
 
-//     try {
-//         const prisma = new PrismaClient();
+    try {
+        const prisma = new PrismaClient();
 
      
 
-//         let reqBody = await req.json()
+        let reqBody = await req.json()
 
-//         let result = await prisma.students.createMany({
-//             data: reqBody
-//         })
+        let result = await prisma.students.createMany({
+            data: reqBody
+        })
 
-//         return NextResponse.json({ status: 'success', data: result })
+        return NextResponse.json({ status: 'success', data: result })
 
-//     } catch (e) {
-//         return NextResponse.json({ status: 'fail', data: e.toString()})
+    } catch (e) {
+        return NextResponse.json({ status: 'fail', data: e.toString()})
 
-//     }
-// }
+    }
+}
 
 
 
@@ -73,26 +73,26 @@ import { PrismaClient } from "@prisma/client";
 
 
 
-// export async function POST (req , res){
+export async function POST (req , res){
 
-//        try{
-//         const prisma = new PrismaClient();
+       try{
+        const prisma = new PrismaClient();
 
 
-//        let reqBody = await req.json()
+       let reqBody = await req.json()
 
      
-//         let result = await prisma.students.delete({
-//             where:reqBody
-//         })
+        let result = await prisma.students.delete({
+            where:reqBody
+        })
 
-//         return NextResponse.json({status:'success' , data:result})
+        return NextResponse.json({status:'success' , data:result})
 
-//        }catch(e){
-//         return NextResponse.json({status:'fail' , data: e.toString()})
+       }catch(e){
+        return NextResponse.json({status:'fail' , data: e.toString()})
 
-//        }
-// }
+       }
+}
 
 
 
@@ -105,26 +105,26 @@ import { PrismaClient } from "@prisma/client";
 
 
 
-// export async function POST (req , res){
+export async function POST (req , res){
 
-//        try{
-//         const prisma = new PrismaClient();
+       try{
+        const prisma = new PrismaClient();
 
-//        let reqBody = await req.json()
+       let reqBody = await req.json()
 
 
-//         let result = await prisma.students.update({
-//             where:{id:reqBody['id']},
-//             data:{age:reqBody['age']}
-//         })
+        let result = await prisma.students.update({
+            where:{id:reqBody['id']},
+            data:{age:reqBody['age']}
+        })
 
-//         return NextResponse.json({status:'success' , data:result})
+        return NextResponse.json({status:'success' , data:result})
 
-//        }catch(e){
-//         return NextResponse.json({status:'fail' , data: e.toString()})
+       }catch(e){
+        return NextResponse.json({status:'fail' , data: e.toString()})
 
-//        }
-// }
+       }
+}
 
 
 
@@ -141,24 +141,24 @@ import { PrismaClient } from "@prisma/client";
 
 
 
-// export async function GET (req , res){
+export async function GET (req , res){
 
-//        try{
-//         const prisma = new PrismaClient();
+       try{
+        const prisma = new PrismaClient();
 
      
-//         let result = await prisma.students.findUnique({
-//             where:{id:2}, 
+        let result = await prisma.students.findUnique({
+            where:{id:2}, 
         
-//         })
+        })
 
-//         return NextResponse.json({status:'success' , data:result})
+        return NextResponse.json({status:'success' , data:result})
 
-//        }catch(e){
-//         return NextResponse.json({status:'fail' , data: e.toString()})
+       }catch(e){
+        return NextResponse.json({status:'fail' , data: e.toString()})
 
-//        }
-// }
+       }
+}
 
 
 
